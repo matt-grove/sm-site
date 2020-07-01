@@ -21,6 +21,7 @@ time, mark, audio, video {
 
 :root {
   --text-main: hsl(195, 10%, 23%);
+  --base: hsl(205, 57%, 54%);
 }
 
 
@@ -44,15 +45,6 @@ html, body {
   display: flex;
   align-content: center;
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -81,7 +73,6 @@ header {
   padding: 17px 20px;
   display: flex;
   align-items: center;
-
 }
 
 .nav-links li a {
@@ -234,13 +225,64 @@ header {
 }
 
 
+
+
+
+
+
 .content {
-  padding-top: 50px;
+  /* height: 90%; */
 }
 
+
+
+.max-width {
+  width: 930px;
+  padding: 10px;
+}
+
+#banner {
+  margin-top: 50px;
+  padding: 50px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(172px, 1fr));
+  grid-auto-rows: 178px;
+  grid-auto-flow: dense;
+}
+
+.block {
+  background-color: grey;
+}
+
+
+
+.banner-text {
+  grid-column: span 2;
+  grid-row: span 3;
+  background-color: var(--base);
+}
+
+.banner-image {
+  grid-column: span 3;
+  grid-row: span 3;
+  background-color: pink;
+}
+
+
+
+
+
 .white {
-  height: 600px;
   background-color: lightblue;
+  height: 600px;
 }
 
 .blue {
@@ -263,7 +305,22 @@ header {
 
 
 
-@media(max-width: 769px) {
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 920px) {
+
+  #navbar {
+    height: 46px;
+  }
+
   .nav-main-content {
     padding: 0;
     display: block;
@@ -276,7 +333,7 @@ header {
   }
 
   .active {
-    height:230px;
+    height:184px;
     -webkit-transition:all, 0.3s ease;
     -moz-transition: all, 0.3s ease;
     -ms-transition: all, 0.3s ease;
@@ -312,8 +369,47 @@ header {
   .nav-collapser {
     background-color: var(--bg-nav-sub);
     display: flex;
+    right: 0;
+    position: absolute;
     justify-content: flex-end;
     height: 52px;
     align-content: center;
   }
+
+
+
+  .container {
+    grid-template-columns: 1fr;
+    grid-auto-rows: unset;
+    grid-gap: 5px;
+
+  }
+
+  .banner-text {
+    width: 100%;
+    grid-column: unset;
+    grid-row: unset;
+    /* grid-column: span 4; */
+    /* grid-row: span 1; */
+
+  }
+
+  .banner-image {
+    width: 100%;
+    grid-column: unset;
+    grid-row: unset;
+    /* grid-column: span 4; */
+    /* grid-row: span 4; */
+
+  }
+
+  .container > [style^='--aspect-ratio']::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 0;
+    padding-bottom: calc(100% / (var(--aspect-ratio)));
+  }
+
+
 }

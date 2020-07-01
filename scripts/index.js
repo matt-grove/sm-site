@@ -8,6 +8,11 @@ console.log("hi")
 
 
 window.onscroll = () => {
+  if (dropdownActive) {
+    dropdownActive = false
+    mainNav.classList.toggle("active");
+    navBarToggle.classList.toggle("is-active");
+  }
   let currentScrollPos = window.pageYOffset;
   if (currentScrollPos < 1 || currentScrollPos < prevScrollPos || dropdownActive) {
     document.getElementById("navbar").style.top = "0";
