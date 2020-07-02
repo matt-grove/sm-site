@@ -4,9 +4,6 @@ let navBarToggle = document.getElementById("legendMinimizer");
 let dropdownActive = false;
 
 
-console.log("hi")
-
-
 window.onscroll = () => {
   if (dropdownActive) {
     dropdownActive = false
