@@ -22,8 +22,10 @@ time, mark, audio, video {
 :root {
   --text-main: hsl(195, 10%, 23%);
   --grey-10: hsl(0,0%,100%);
+  --grey-5: hsl(0, 0%, 78%);
   /* --base: hsl(205, 57%, 54%); */
   --base: hsl(205, 84%, 15%);
+
 
 }
 
@@ -47,10 +49,29 @@ h1 {
   margin: 10px 0;
 }
 
+
+h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 30px;
+  margin: 0 0 15px 0;
+}
+
+
 h3 {
   font-size: 22px;
   font-weight: 300;
 }
+
+
+p {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+
+
 
 .text-invert {
   color: var(--grey-10);
@@ -257,22 +278,24 @@ header {
 
 
 .content {
-  /* height: 90%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
 }
+
 
 
 
 .max-width {
   width: 930px;
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 #banner {
   margin-top: 50px;
   padding: 50px 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 
@@ -312,7 +335,7 @@ header {
 .banner-image-container {
   grid-column: span 3;
   grid-row: span 3;
-  background-color: pink;
+  background-color: var(--grey-10);
   /* object-fit: fill; */
   /* overflow: hidden; */
 }
@@ -353,6 +376,49 @@ header {
 
 
 
+.button-light {
+  border: 2px solid var(--base);
+  margin-bottom: 0;
+}
+
+
+.button:hover {
+  background-color: var(--grey-10);
+  border: 2px solid var(--base);
+  color: var(--base);
+  cursor: pointer;
+  transition: all 0.1s ease 0s;
+}
+
+
+#about {
+  padding: 200px 0;
+}
+
+.about-border {
+  max-width: 550px;
+  padding: 40px;
+  border-top: 1px solid var(--grey-5);
+  border-bottom: 1px solid var(--grey-5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+
+#services {
+  padding: 200px 15px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+
+
+
+
+
+
 
 .white {
   background-color: lightblue;
@@ -389,7 +455,13 @@ header {
 
 
 
-@media(max-width: 920px) {
+@media(max-width: 930px) {
+
+
+
+  .max-width {
+    width: 600px;
+  }
 
   #navbar {
     height: 46px;
@@ -504,9 +576,6 @@ header {
     /* grid-row: span 4; */
   }
 
-
-
-
   .container > [style^='--aspect-ratio']::before {
     content: "";
     display: inline-block;
@@ -514,6 +583,39 @@ header {
     height: 0;
     padding-bottom: calc(100% / (var(--aspect-ratio)));
   }
+
+  #about {
+    padding: 100px 15px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+
+  #banner {
+    padding: 15px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+
+  #services {
+    padding: 50px 15px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+
+
+
+
+  .about-border {
+    max-width: 600px;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+
 
 
 }

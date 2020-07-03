@@ -12,7 +12,7 @@
 
     <div class='nav-main-content' id='nav-main'>
       <ul class='nav-links'>
-        <li><a href='#banner' onclick="legendMinimizer()">ABOUT</a></li>
+        <li><a href='#about' onclick="legendMinimizer()">ABOUT</a></li>
         <li><a href='#gallery' onclick="legendMinimizer()">GALLERY</a></li>
         <li><a href='#services' onclick="legendMinimizer()">SERVICES</a></li>
         <li><a href='#contact' onclick="legendMinimizer()">CONTACT</a></li>
@@ -42,7 +42,7 @@
             <button class='button header-button' onclick="location.href='#contact'">Get in touch</button>
           </div>
         </div>
-        <div class='block banner-image-container' style="--aspect-ratio: 1/1;">
+        <div class='block banner-image-container' >
           <!-- <p>hi</p> -->
           <img class='image' src="images/banner.jpg"/>
         </div>
@@ -50,13 +50,23 @@
     </div>
   </div>
 
-  <div id='gallery' class='content blue'>
+  <div id='about' class='content'>
+    <div class='about-border'>
+      <h2>About</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+      <button class='button button-light' onclick="location.href='#contact'">Send Message</button>
+    </div>
+  </div>
+
+  <div id='services' class='content'>
+    <h2>Services</h2>
+  </div>
+
+  <div id='gallery' class='content white'>
     <h1>Gallery</h1>
   </div>
 
-  <div id='services' class='content white'>
-    <h1>Services</h1>
-  </div>
+
 
   <div id='contact' class='content blue'>
     <h1>Contact</h1>
