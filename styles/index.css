@@ -73,6 +73,40 @@ p {
 
 
 
+input {
+  width: 100%;
+  color: #525865;
+  border-radius: 4px;
+  border: 1px solid var(--grey10);
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.02);
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  padding: 9px 10px;
+  -webkit-transition: .18s ease-out;
+  -moz-transition: .18s ease-out;
+  -o-transition: .18s ease-out;
+  transition: .18s ease-out;
+  margin: 10px 0;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+}
+
+input:focus {
+  color: #4b515d;
+  box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px var(--grey10) inset;
+}
+
+
+
+
 .text-invert {
   color: var(--grey-10);
 }
@@ -355,6 +389,7 @@ header {
 
 .image {
   width: 100%;
+  height: 100%;
 }
 
 
@@ -455,25 +490,67 @@ header {
 
 
 
-
+/* #services {
+  background-color: var(--base);
+} */
 
 .gallery-container {
-  padding: 20px;
+  margin: 20px;
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-auto-rows: min-content;
+  overflow: hidden;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
 }
 
 
 .gallery-image-box {
-  grid-auto-rows: auto;
-
+  height: 100%;
+  max-width: 100%;
 }
 
 
 
 
+
+
+
+
+
+
+
+
+
+#contact {
+  background-color: var(--base);
+  height: 1000px;
+  padding: 10px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  /* flex-flow: row; */
+  /* justify-content: space-evenly; */
+}
+
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 900px;
+}
+
+.contact-info {
+  max-width: 330px;
+}
+
+.contact-form {
+  max-width: 400px;
+}
 
 
 
@@ -490,24 +567,6 @@ header {
 .bg-2 {
   background-color: grey;
 }
-
-
-
-
-
-
-.white {
-  background-color: lightblue;
-  height: 600px;
-}
-
-.blue {
-  height: 600px;
-  background-color: steelblue;
-}
-
-
-
 
 
 
@@ -695,6 +754,41 @@ header {
   .service-container {
     grid-template-columns: 1fr 1fr;
   }
+
+
+  .contact-container {
+    flex-flow: column;
+    max-width: 500px;
+    align-items: flex-start;
+  }
+
+  .contact-info {
+    padding: 50px 0;
+  }
+
+  .contact-form {
+    padding: 50px 0;
+    max-width: 100%;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+@media(max-width: 600px) {
+
+
+
+  .gallery-container {
+    margin: 10px;
+  }
+
 
 
 
