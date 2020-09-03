@@ -25,3 +25,14 @@ legendMinimizer = () => {
       navBarToggle.classList.toggle("is-active");
       dropdownActive = !dropdownActive;
 }
+
+
+sendEmail = () => {
+    const link = "mailto:sam.morfitt@hotmail.co.uk"
+               + "?subject="
+               + encodeURIComponent("Website Query - " + document.getElementById('email-name').value + " - " + encodeURIComponent(document.getElementById('email-number').value))
+               + "&body="
+               + encodeURIComponent(document.getElementById('email-body').value)
+
+    window.location.href = link
+}

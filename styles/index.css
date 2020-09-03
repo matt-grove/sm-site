@@ -70,10 +70,12 @@ p {
   line-height: 28px;
 }
 
+a {
+  text-decoration: none;
+}
 
 
-
-input {
+input, textarea {
   width: 100%;
   color: #525865;
   border-radius: 4px;
@@ -105,6 +107,14 @@ input:-webkit-autofill:active  {
 }
 
 
+.input-wrapper {
+  padding-top: 10px;
+}
+
+.text-area {
+  height: 200px;
+  resize: none;
+}
 
 
 .text-invert {
@@ -478,7 +488,7 @@ header {
 
 
 #gallery {
-  padding: 100px 0;
+  padding: 50px 0;
   flex-flow: column;
 }
 
@@ -539,7 +549,7 @@ header {
 .contact-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   max-width: 900px;
 }
@@ -582,9 +592,23 @@ header {
 
 
 
+.send-button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
 
+.contact-links {
+  display: flex;
+  align-items: center;
+  padding: 12px 0px;
+  cursor: pointer;
+}
 
-
+.contact-links > * {
+  padding-right: 12px;
+  /* display: inline-block; */
+}
 
 
 
@@ -688,7 +712,7 @@ header {
 
   .header-button:hover {
     background-color: var(--base);
-    border-color: var(--base);
+    border-color: var(--grey-10);
     color: var(--grey-10);
   }
 
@@ -756,10 +780,13 @@ header {
   }
 
 
+
+
   .contact-container {
+    display: block;
     flex-flow: column;
     max-width: 500px;
-    align-items: flex-start;
+    /* align-items: flex-start; */
   }
 
   .contact-info {
@@ -767,7 +794,7 @@ header {
   }
 
   .contact-form {
-    padding: 50px 0;
+    /* padding: 50px 0; */
     max-width: 100%;
   }
 
