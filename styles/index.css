@@ -123,7 +123,9 @@ input:-webkit-autofill:active  {
 
 
 
-
+#logo {
+  padding: 6px 0px 6px 6px;
+}
 
 
 
@@ -522,9 +524,17 @@ header {
   max-width: 100%;
 }
 
+.path {
+  stroke-dasharray: 350;
+  stroke-dashoffset: 350;
+  animation: dash 3s ease forwards 0.8s;
+}
 
-
-
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 
 
 
@@ -536,8 +546,8 @@ header {
 
 #contact {
   background-color: var(--base);
-  height: 1000px;
-  padding: 10px;
+
+  padding: 100px 10px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -617,9 +627,16 @@ header {
 @media(max-width: 930px) {
 
 
+  #logo {
+    display: none;
+  }
 
   .max-width {
     width: 600px;
+  }
+
+  #contact {
+    padding: 30px 10px;
   }
 
   #navbar {
