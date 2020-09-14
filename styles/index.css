@@ -124,7 +124,7 @@ input:-webkit-autofill:active  {
 
 
 #logo {
-  padding: 6px 0px 6px 6px;
+  padding: 7px 0px 3px 3px;
 }
 
 
@@ -427,7 +427,7 @@ header {
 
 .button:hover {
   background-color: var(--grey-10);
-  border: 2px solid var(--grey-10);
+  /* border: 2px solid var(--grey-10); */
   color: var(--base);
   cursor: pointer;
   transition: all 0.1s ease 0s;
@@ -443,7 +443,6 @@ header {
 
 .button:hover {
   background-color: var(--grey-10);
-  border: 2px solid var(--base);
   color: var(--base);
   cursor: pointer;
   transition: all 0.1s ease 0s;
@@ -525,9 +524,9 @@ header {
 }
 
 .path {
-  stroke-dasharray: 350;
-  stroke-dashoffset: 350;
-  animation: dash 3s ease forwards 0.8s;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: dash 4s ease forwards 0.5s;
 }
 
 @keyframes dash {
@@ -537,6 +536,45 @@ header {
 }
 
 
+
+
+
+.fade-in {
+display: inline-block;
+font-family: 'Montserrat';
+font-size: 30px;
+color: black;
+text-transform: none;
+margin: 0 20px;
+opacity: 0.0;
+animation: fadeIn forwards 2s 1s;
+-webkit-animation: fadeIn forwards 2s 1s;
+}
+
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
 
 
 
@@ -729,11 +767,13 @@ header {
 
   .header-button:hover {
     background-color: var(--base);
-    border-color: var(--grey-10);
     color: var(--grey-10);
   }
 
+  .send-button {
+    border-color: var(--grey-10);
 
+  }
 
 
   .banner-text-container {
