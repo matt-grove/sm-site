@@ -3,10 +3,13 @@
 <head>
   <title>Sam Morfitt Plumbing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <link rel="icon" href="images/plumbing.ico" type="image/x-icon"/>
+  <link rel="apple-touch-icon" href="images/plumbing192.png" />
+
   <link rel="stylesheet" type="text/css" href="styles/index.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload=yearCalculator()>
 
   <header data-aos="fade-in" id="navbar">
 
@@ -71,7 +74,7 @@
         <div class='banner-text' style="--aspect-ratio: 5/3;">
           <div class='banner-text-container'>
             <h1 class='banner-text'>Sam Morfitt Plumbing</h1>
-            <h3 class='banner-text text-invert'>Sheffield based plumber with x years experience</h3>
+            <h3 id='subtitle-year' class='banner-text text-invert'>Sheffield based with years in the industry</h3>
             <button class='button header-button' onclick="location.href='#contact'">Get in touch</button>
           </div>
         </div>
@@ -86,7 +89,9 @@
   <div id='about' class='content'>
     <div class='about-border'>
       <h2>About</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+      <p>We're an independent business that offers quality plumbing services with a friendly face. Fully qualified & fully insured, it means you can be rest assured that all jobs are completed to the highest standard.</p>
+      <p>And with our 24-hour emergency call service across Sheffield, Barnsley, Rotherham, and Doncaster, it means we're here for you when you need it most.</p>
+
       <button class='button button-light' onclick="location.href='#contact'">Send Message</button>
     </div>
   </div>
@@ -209,7 +214,7 @@
     <div class='contact-container'>
       <div class='contact-info'>
         <h1>Weighing up a job?</h1>
-        <p class='text-invert'>Drop me a message or give me a bell, I'm happy to have a chat!</p>
+        <p class='text-invert'>Drop us a message or give us a bell, we're happy to have a chat!</p>
 
         <a href="tel:+447469950523">
           <div class='contact-links'>
