@@ -55,7 +55,7 @@ sendEmail = () => {
   window.location.href = link;
 };
 
-yearCalculator = () => {
+yearCalculator = (() => {
   const start = new Date('2013-01-01');
   const today = new Date();
 
@@ -63,4 +63,4 @@ yearCalculator = () => {
   document.getElementById('subtitle-year').innerHTML = 'Sheffield based with over ' +
   years + ' years in the industry';
   return 7;
-};
+})();
